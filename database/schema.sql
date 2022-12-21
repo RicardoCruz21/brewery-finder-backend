@@ -92,6 +92,16 @@ CREATE TABLE events (
     constraint pk_events PRIMARY KEY (event_id)
 );
 
+CREATE TABLE images (
+	image_id serial,
+	image_name varchar(100) NOT NULL,
+	image_size bigint,
+	image_type varchar(100),
+	image_content bytea,
+	
+	constraint pk_images PRIMARY KEY (image_id)
+);
+
 CREATE TABLE breweries_beers (
     brewery_id int NOT NULL,
     beer_id int NOT NULL,

@@ -4,8 +4,8 @@ public class Image {
 
     private int id;
     private String name;
-    private int size;
-    private int type;
+    private long size;
+    private String type;
     private byte[] content;
 
     public Image() {
@@ -27,19 +27,19 @@ public class Image {
         this.name = name;
     }
 
-    public int getSize() {
+    public long getSize() {
         return size;
     }
 
-    public void setSize(int size) {
+    public void setSize(long size) {
         this.size = size;
     }
 
-    public int getType() {
+    public String getType() {
         return type;
     }
 
-    public void setType(int type) {
+    public void setType(String type) {
         this.type = type;
     }
 
