@@ -20,6 +20,17 @@ CREATE TABLE addresses (
     constraint pk_addresses PRIMARY KEY (address_id)
 );
 
+CREATE TABLE images (
+	image_id serial,
+	image_name varchar(100),
+	image_link varchar(100),
+	image_size bigint,
+	image_type varchar(100),
+	image_content bytea,
+	
+	constraint pk_images PRIMARY KEY (image_id)
+);
+
 CREATE TABLE breweries (
     brewery_id serial,
     brewery_name varchar(100) NOT NULL,
@@ -29,25 +40,28 @@ CREATE TABLE breweries (
     address_id int NOT NULL,
     phone_number varchar(10),
     brewery_history text,
-    brewery_logo varchar(300),
-	brewery_image varchar(300),
+    brewery_logo int,
+	brewery_image int,
     is_active boolean NOT NULL,
 
     constraint pk_breweries PRIMARY KEY (brewery_id),
     constraint fk_breweries FOREIGN KEY (user_id) references users (user_id),
-    constraint fk_brewery_address FOREIGN KEY (address_id) references addresses (address_id)
+    constraint fk_brewery_address FOREIGN KEY (address_id) references addresses (address_id),
+	constraint fk_brewery_logo_images FOREIGN KEY (brewery_logo) references images (image_id),
+	constraint fk_brewery_image_images FOREIGN KEY (brewery_image) references images (image_id)
 );
 
 CREATE TABLE beers (
     beer_id serial,
     beer_name varchar(100) NOT NULL,
     beer_description varchar(400) NOT NULL,
-    image varchar(300) NOT NULL,
+    image int,
     abv numeric(2,1) NOT NULL,
     beer_type varchar(50) NOT NULL,
     is_active boolean NOT NULL,
 
-    constraint pk_beers PRIMARY KEY (beer_id)
+    constraint pk_beers PRIMARY KEY (beer_id),
+	constraint fk_beer_image_images FOREIGN KEY (image) references images (image_id)
 );
 
 CREATE TABLE reviews (
@@ -90,16 +104,6 @@ CREATE TABLE events (
     event_text text,
 
     constraint pk_events PRIMARY KEY (event_id)
-);
-
-CREATE TABLE images (
-	image_id serial,
-	image_name varchar(100) NOT NULL,
-	image_size bigint,
-	image_type varchar(100),
-	image_content bytea,
-	
-	constraint pk_images PRIMARY KEY (image_id)
 );
 
 CREATE TABLE breweries_beers (
