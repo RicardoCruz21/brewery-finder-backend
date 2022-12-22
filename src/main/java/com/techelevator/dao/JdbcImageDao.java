@@ -32,6 +32,12 @@ public class JdbcImageDao implements ImageDao {
         return imageId;
     }
 
+    @Override
+    public void updateImage(Image image) {
+        String sql = "UPDATE images SET image_name = ?, image_size = ?, image_type = ?, image_content = ? WHERE image_id = ?;";
+        jdbcTemplate.update(sql, image.getName(), image.getSize(), image.getType(), image.getContent(), image.getId());
+    }
+
     private Image mapRowToImage(SqlRowSet rowSet) {
         Image image = new Image();
         image.setId(rowSet.getInt("image_id"));

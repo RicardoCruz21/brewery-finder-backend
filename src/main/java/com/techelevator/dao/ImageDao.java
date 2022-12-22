@@ -7,4 +7,6 @@ public interface ImageDao {
     Image getImage(int imageId);
 
     int addImage(Image image);
+
+    void updateImage(Image image);
 }
