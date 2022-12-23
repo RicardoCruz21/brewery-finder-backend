@@ -1,11 +1,16 @@
 package com.techelevator.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 public class Image {
 
     private int id;
     private String name;
+    @JsonIgnore
     private long size;
+    @JsonIgnore
     private String type;
+    @JsonIgnore
     private byte[] content;
 
     public Image() {

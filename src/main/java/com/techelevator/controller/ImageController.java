@@ -7,6 +7,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.io.IOException;
 
@@ -27,9 +28,13 @@ public class ImageController {
 
     @RequestMapping(path = "/images/{imageId}", method = RequestMethod.GET)
     public ResponseEntity<byte[]> downloadImage(@PathVariable int imageId) {
-        Image image = imageDao.getImage(imageId);
-        byte[] imageData = image.getContent();
-        return ResponseEntity.status(HttpStatus.OK).contentType(MediaType.parseMediaType(image.getType())).body(imageData);
+        try {
+            Image image = imageDao.getImage(imageId);
+            byte[] imageData = image.getContent();
+            return ResponseEntity.status(HttpStatus.OK).contentType(MediaType.parseMediaType(image.getType())).body(imageData);
+        } catch (Exception e) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Image not found");
+        }
     }
 
     @RequestMapping(path = "/images", method = RequestMethod.POST)

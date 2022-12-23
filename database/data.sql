@@ -24,162 +24,195 @@ VALUES('307 Bryant Street', 'Ojai', 'CA', '93023');
 INSERT INTO addresses (street_address, city, state, zipcode)
 VALUES('5777 Olivas Park Dr Unit S', 'Ventura', 'CA', '93003');
 
+-- BREWERY IMAGES
+INSERT INTO images DEFAULT VALUES;
+INSERT INTO images DEFAULT VALUES;
+INSERT INTO images DEFAULT VALUES;
+INSERT INTO images DEFAULT VALUES;
+INSERT INTO images DEFAULT VALUES;
+INSERT INTO images DEFAULT VALUES;
+INSERT INTO images DEFAULT VALUES;
+INSERT INTO images DEFAULT VALUES;
+
 -- BREWERIES
-INSERT INTO breweries (brewery_name, user_id, website_url, email_address, address_id, phone_number, brewery_history, is_active)
-VALUES('MadeWest Brewing Company', 2, 'https://madewest.com/', 'beer@madewest.com', 1, '8059475002', 'MadeWest is the result of lifelong friends seeking to share quality handmade craft beer with our beloved home state. Our vision is inspired by California’s legacy of adventure and innovative design—and our beer reflects that as much in the great outdoors as from a barstool at one of our two Ventura taprooms. Wherever you take MadeWest, you’ll take the spirit of the West Coast with you.','true');
+INSERT INTO breweries (brewery_name, user_id, website_url, email_address, address_id, phone_number, brewery_history, brewery_logo, brewery_image, is_active)
+VALUES('MadeWest Brewing Company', 2, 'https://madewest.com/', 'beer@madewest.com', 1, '8059475002', 'MadeWest is the result of lifelong friends seeking to share quality handmade craft beer with our beloved home state. Our vision is inspired by California’s legacy of adventure and innovative design—and our beer reflects that as much in the great outdoors as from a barstool at one of our two Ventura taprooms. Wherever you take MadeWest, you’ll take the spirit of the West Coast with you.', 1, 2, 'true');
 
-INSERT INTO breweries (brewery_name, user_id, website_url, email_address, address_id, phone_number, brewery_history, is_active)
-VALUES('Topa Topa Brewing Company', 3, 'https://topatopa.beer/', 'hi@topatopa.beer', 2, '8055354366', 'Topa Topa Brewing Co. was founded in 2015 in Ventura, CA, nestled between the Topa Topa mountains in Ojai and the salty shores of the Pacific. We believe the people should drink great beer! And we love that we get to craft great beer amongst a landscape and community that inspires us.Topa Topa is upheld by a trifecta of values: quality, craftsmanship, and community spirit. This means we use the freshest ingredients, we work with the most skilled brewers around, and we thrive on uplifting and unifying our community. We get stoked on good surf, a long hike, a tough climb, or a good-old-fashioned day of hard work. And we think these days are made all the better when we’re surrounded by friends with a cold beer in hand. So next time you’re near one of our tap rooms— whether in Ventura, Ojai, Santa Barbara or Camarillo— pull up a chair, grab a fresh pint, and enjoy the company. Or if you’re gearing up to take to the trails or the sea, never fear, we have 6-packs, growlers, and crowlers aplenty.','true');
+INSERT INTO breweries (brewery_name, user_id, website_url, email_address, address_id, phone_number, brewery_history, brewery_logo, brewery_image, is_active)
+VALUES('Topa Topa Brewing Company', 3, 'https://topatopa.beer/', 'hi@topatopa.beer', 2, '8055354366', 'Topa Topa Brewing Co. was founded in 2015 in Ventura, CA, nestled between the Topa Topa mountains in Ojai and the salty shores of the Pacific. We believe the people should drink great beer! And we love that we get to craft great beer amongst a landscape and community that inspires us.Topa Topa is upheld by a trifecta of values: quality, craftsmanship, and community spirit. This means we use the freshest ingredients, we work with the most skilled brewers around, and we thrive on uplifting and unifying our community. We get stoked on good surf, a long hike, a tough climb, or a good-old-fashioned day of hard work. And we think these days are made all the better when we’re surrounded by friends with a cold beer in hand. So next time you’re near one of our tap rooms— whether in Ventura, Ojai, Santa Barbara or Camarillo— pull up a chair, grab a fresh pint, and enjoy the company. Or if you’re gearing up to take to the trails or the sea, never fear, we have 6-packs, growlers, and crowlers aplenty.', 3, 4, 'true');
 
-INSERT INTO breweries (brewery_name, user_id, website_url, email_address, address_id, phone_number, brewery_history, is_active)
-VALUES('Ojai Valley Brewery', 4, 'https://ojaivalleybrewery.com/', 'cmartinez@ojaivalleyinn.com', 3, '8057989282', 'Brewing at 307 Bryant Street, in Ojai California since 2017: We believe in the magic of Ojai, and Indigenous Ojai Botanicals. Ojai is a place where people have always come for recovery and fortification. Ojai is Chumash for ''“The Nest”''. It''s a place where good people find good people, through nature and unique and meaningful experiences. It’s also a place that attracts a wide variety of expert crafts people to a rather small community. Ojai lives in our beers and brews. Inoculated by the unfiltered culture of our community, by the hands of our local brewers, in the pure Ojai water, and in the indigenous herbs, fruits, and flowers we infuse into our one-of-a-kind creations. We make beer that is an expression of our environment, to commune with the natural world that surrounds us. We share these moments together. We find unity in the mutual appreciation of these natural gifts and in the good times we share.', 'true');
+INSERT INTO breweries (brewery_name, user_id, website_url, email_address, address_id, phone_number, brewery_history, brewery_logo, brewery_image, is_active)
+VALUES('Ojai Valley Brewery', 4, 'https://ojaivalleybrewery.com/', 'cmartinez@ojaivalleyinn.com', 3, '8057989282', 'Brewing at 307 Bryant Street, in Ojai California since 2017: We believe in the magic of Ojai, and Indigenous Ojai Botanicals. Ojai is a place where people have always come for recovery and fortification. Ojai is Chumash for ''“The Nest”''. It''s a place where good people find good people, through nature and unique and meaningful experiences. It’s also a place that attracts a wide variety of expert crafts people to a rather small community. Ojai lives in our beers and brews. Inoculated by the unfiltered culture of our community, by the hands of our local brewers, in the pure Ojai water, and in the indigenous herbs, fruits, and flowers we infuse into our one-of-a-kind creations. We make beer that is an expression of our environment, to commune with the natural world that surrounds us. We share these moments together. We find unity in the mutual appreciation of these natural gifts and in the good times we share.', 5, 6, 'true');
 
-INSERT INTO breweries (brewery_name, user_id, website_url, email_address, address_id, phone_number, brewery_history, is_active)
-VALUES('Poseidon Brewing Company', 5, 'https://poseidonbrewingco.com/', 'info@poseidonbrewingco.com', 4, '8054770239', 'You tend to do what you love in life. Or at least that’s been a motto that Brian Oliver, Poseidon’s co-proprietor and head brewer, has made a point to live by. As far back as 2007, when he was stationed in Iraq, he discovered craft beer—and that he loved it. So in his downtime, he researched homebrewing…and got the hankering to pursue it himself. No surprise, making a batch didn’t seem too hard a feat for this Navy-trained underwater construction diver. Right after returning to Ventura County, California, Brian took up the hobby along with his wife, Vinita, who also had an appreciation for high-quality beers. Together the couple sampled their brews with friends and neighbors, noticing the compliments, good times, and real sense of community their hobby created. It was inspiring, so much so that Brian, now at the tail end of his 23-year Navy career and feeling confident about his craft, took a leap and launched Poseidon Brewing Co., along with Vinita’s help.', 'true');
+INSERT INTO breweries (brewery_name, user_id, website_url, email_address, address_id, phone_number, brewery_history, brewery_logo, brewery_image, is_active)
+VALUES('Poseidon Brewing Company', 5, 'https://poseidonbrewingco.com/', 'info@poseidonbrewingco.com', 4, '8054770239', 'You tend to do what you love in life. Or at least that’s been a motto that Brian Oliver, Poseidon’s co-proprietor and head brewer, has made a point to live by. As far back as 2007, when he was stationed in Iraq, he discovered craft beer—and that he loved it. So in his downtime, he researched homebrewing…and got the hankering to pursue it himself. No surprise, making a batch didn’t seem too hard a feat for this Navy-trained underwater construction diver. Right after returning to Ventura County, California, Brian took up the hobby along with his wife, Vinita, who also had an appreciation for high-quality beers. Together the couple sampled their brews with friends and neighbors, noticing the compliments, good times, and real sense of community their hobby created. It was inspiring, so much so that Brian, now at the tail end of his 23-year Navy career and feeling confident about his craft, took a leap and launched Poseidon Brewing Co., along with Vinita’s help.', 7, 8, 'true');
+
+-- BEER IMAGES
+INSERT INTO images DEFAULT VALUES;
+INSERT INTO images DEFAULT VALUES;
+INSERT INTO images DEFAULT VALUES;
+INSERT INTO images DEFAULT VALUES;
+INSERT INTO images DEFAULT VALUES;
+INSERT INTO images DEFAULT VALUES;
+INSERT INTO images DEFAULT VALUES;
+INSERT INTO images DEFAULT VALUES;
+INSERT INTO images DEFAULT VALUES;
+INSERT INTO images DEFAULT VALUES;
+INSERT INTO images DEFAULT VALUES;
+INSERT INTO images DEFAULT VALUES;
+INSERT INTO images DEFAULT VALUES;
+INSERT INTO images DEFAULT VALUES;
+INSERT INTO images DEFAULT VALUES;
+INSERT INTO images DEFAULT VALUES;
+INSERT INTO images DEFAULT VALUES;
+INSERT INTO images DEFAULT VALUES;
+INSERT INTO images DEFAULT VALUES;
+INSERT INTO images DEFAULT VALUES;
+INSERT INTO images DEFAULT VALUES;
 
 -- BEERS
-INSERT INTO beers (beer_name, beer_description, abv, beer_type, is_active)
-VALUES('Standard', 'A clean, crisp, sessionable, light ale, this Great American Beer Fest gold-medal winner is easy drinking and full of flavor. It has a light, grainy, malt backbone and a prominent floral hop character with a dry, refreshing finish. HOPS: Saaz, Mandarina Bavaria', 5.6, 'Blonde Ale', 'true');
+INSERT INTO beers (beer_name, beer_description, image, abv, beer_type, is_active)
+VALUES('Standard', 'A clean, crisp, sessionable, light ale, this Great American Beer Fest gold-medal winner is easy drinking and full of flavor. It has a light, grainy, malt backbone and a prominent floral hop character with a dry, refreshing finish. HOPS: Saaz, Mandarina Bavaria', 9, 5.6, 'Blonde Ale', 'true');
 
-INSERT INTO beers (beer_name, beer_description, abv, beer_type, is_active)
-VALUES('Pale', 'This heavily hopped West Coast Pale Ale is bursting with a bright citrus and fruity hop complexity. It has just enough malt presence to allow the loads of hops to shine through. This crisp, hop forward beer has a dry, refreshing finish. HOPS: Mosaic, Simcoe, Ekuanot', 5.6, 'Pale Ale - American', 'true');
+INSERT INTO beers (beer_name, beer_description, image, abv, beer_type, is_active)
+VALUES('Pale', 'This heavily hopped West Coast Pale Ale is bursting with a bright citrus and fruity hop complexity. It has just enough malt presence to allow the loads of hops to shine through. This crisp, hop forward beer has a dry, refreshing finish. HOPS: Mosaic, Simcoe, Ekuanot', 10, 5.6, 'Pale Ale - American', 'true');
 
-INSERT INTO beers (beer_name, beer_description, abv, beer_type, is_active)
-VALUES('IPA', 'This West Coast IPA is loaded with a fresh tropical fruit character. A light malt base provides a platform for showcasing the complex hop bouquet of pineapple, candy-like stone fruit and citrus tones. This IPA has a mellow bitterness and a smooth, pleasantly dry finish. HOPS: El Dorado, Citra, 07270, Ekuanot, Eureka!', 6.9, 'IPA - American', 'true');
+INSERT INTO beers (beer_name, beer_description, image, abv, beer_type, is_active)
+VALUES('IPA', 'This West Coast IPA is loaded with a fresh tropical fruit character. A light malt base provides a platform for showcasing the complex hop bouquet of pineapple, candy-like stone fruit and citrus tones. This IPA has a mellow bitterness and a smooth, pleasantly dry finish. HOPS: El Dorado, Citra, 07270, Ekuanot, Eureka!', 11, 6.9, 'IPA - American', 'true');
 
-INSERT INTO beers (beer_name, beer_description, abv, beer_type, is_active)
-VALUES('Hazy IPA', 'A hazy IPA packed with a jaw-dropping quantity of Mosaic hops. This aromatic IPA has a ripe juicy character with notes of fresh peaches and mango. A soft, silky mouthfeel is complemented by a smooth, refreshing finish. HOPS: Mosaic, Simcoe, Eureka', 7, 'IPA - New England / Hazy', 'true');
+INSERT INTO beers (beer_name, beer_description, image, abv, beer_type, is_active)
+VALUES('Hazy IPA', 'A hazy IPA packed with a jaw-dropping quantity of Mosaic hops. This aromatic IPA has a ripe juicy character with notes of fresh peaches and mango. A soft, silky mouthfeel is complemented by a smooth, refreshing finish. HOPS: Mosaic, Simcoe, Eureka', 12, 7, 'IPA - New England / Hazy', 'true');
 
-INSERT INTO beers (beer_name, beer_description, abv, beer_type, is_active)
+INSERT INTO beers (beer_name, beer_description, image, abv, beer_type, is_active)
 VALUES(	
 		'Ventura Light', 
 		'Golden, full-flavored light lager made with the finest ingredients to achieve a clean crisp refreshing finish. Pairs perfect with the beach, the trails and everything in between. HOPS: Cascade', 
-		4.2, 'Lager - American Light', 'true');
+		13, 4.2, 'Lager - American Light', 'true');
 
-INSERT INTO beers (beer_name, beer_description, abv, beer_type, is_active)
+INSERT INTO beers (beer_name, beer_description, image, abv, beer_type, is_active)
 VALUES (
 		'Short-Lived Series W/ Fieldwork', 
 		'West Coast IPA hopped with New Zealand''s finest Nelson, Nectaron and Waimea hops. This thiol rich Southern Hemisphere hop combination unleashes tropical fruit aromas with notes of intense grapefruit, passion fruit and guava while the lean malt profile leaves this IPA finishing dry and refreshing. *Thiol Boosted*', 
-		7, 
+		14, 7, 
 		'IPA - American', 
 		'true');
 
-INSERT INTO beers (beer_name, beer_description, abv, beer_type, is_active)
+INSERT INTO beers (beer_name, beer_description, image, abv, beer_type, is_active)
 VALUES (
 		'Chief Peak', 
 		'You’ve gone from shrubland to woodland to highland. When you stop to sip on a Chief Peak, the piney hops are ﬁrst to arrive. The tropical tones of passion fruit, orange, and gooseberry aren’t far behind. Look out on the valley and trace the contours of the mountain. Breathe in the thinning air, wipe the sweat from your brow, and take another well-earned sip. Taste Buds: Tropical, Dank, Citrus ', 
-		7, 
+		15, 7, 
 		'IPA', 
 		'true');
 
-INSERT INTO beers (beer_name, beer_description, abv, beer_type, is_active)
+INSERT INTO beers (beer_name, beer_description, image, abv, beer_type, is_active)
 VALUES (
 		'Spectro', 
 		'You’ve been hiking for hours through a dense fog. Your body is tired and sticky, but you push on toward your goal. Finally, you reach a clearing, the mist lifts, and there sits your reward: an icy can of Spectro Hazy IPA. You sit and sip as you relish the mystery of the haze that swirls around you and in your can. Taste Buds: Pineapple, Peach, Guava', 
-		6.3, 
+		16, 6.3, 
 		'Hazy IPA', 
 		'true');
 
-INSERT INTO beers (beer_name, beer_description, abv, beer_type, is_active)
+INSERT INTO beers (beer_name, beer_description, image, abv, beer_type, is_active)
 VALUES (
 		'Dos Topas', 
 		'The summer sun dips low. You brush the salt from your skin after a long day of ocean swims and sandy beach towel naps. Now, your reward: you sink into your hammock with a Dos Topas in hand and let the cool, crisp taste wash over you. So tomorrow, when those warm sunshiny rays crest the mountain peaks, you’ll be ready for round dos. Taste Buds: Cracker, Maize, Crisp', 
-	   	4.5, 
+	   	17, 4.5, 
 	   	'Lager',
 	   	'true');
 
-INSERT INTO beers (beer_name, beer_description, abv, beer_type, is_active)
+INSERT INTO beers (beer_name, beer_description, image, abv, beer_type, is_active)
 VALUES (
 		'Level Line', 
 		'As you wade in the current, the work week fades to gray. When the line strikes and you begin that delicate dance, there''s no choice but to be in the moment. The refreshing citrus aromas and woodsy notes are like the creek passing through the forest. It''s a West Coast Pale Ale for a West Coast way of life. Taste Buds: Lemongrass, Tangerine, Woodsy', 
-	   	5, 
+	   	18, 5, 
 	   	'Pale Ale',
 	   	'true');
 
-INSERT INTO beers (beer_name, beer_description, abv, beer_type, is_active)
+INSERT INTO beers (beer_name, beer_description, image, abv, beer_type, is_active)
 VALUES (
 		'Pixie', 
 		'White Wheat Ale with Pixie Tangerine Zest & Marmalade, Indian Coriander, and Chamomile, rolled oats, and raw white wheat. Bittering provided by Bravo Hops. Medium Light Body, Round Mouthfeel, Mild balanced bitterness that gives way to slight sweetness. Tasting notes include: apple candy, citrus blossom, orange citrus, vanilla.', 
-	   	6.5, 
+	   	19, 6.5, 
 	   	'White Wheat Ale',
 	   	'true');
 
-INSERT INTO beers (beer_name, beer_description, abv, beer_type, is_active)
+INSERT INTO beers (beer_name, beer_description, image, abv, beer_type, is_active)
 VALUES 		('Sugar Bush', 
 		'Hop forward Pale Ale with Wild Sumac. Anybody who wants an IPA will enjoy this beer. It is basically an IPA but slightly less bitter, and with the addition of lemony sumac berries. We buy the sumac from a foraging supplier. Sugar Bush is the name of the Sumac that grows locally here in Ojai. We have a baby Sugar Bush Sumac growing by the telephone pole next to the patio fence.', 
-	   	6.8, 
+	   	20, 6.8, 
 	   	'Pale Ale',
 	   	'true');
 
-INSERT INTO beers (beer_name, beer_description, abv, beer_type, is_active)
+INSERT INTO beers (beer_name, beer_description, image, abv, beer_type, is_active)
 VALUES (
 		'Cali Bock', 
 		'Hop forward Hybrid Lager. Combination of California Common Lager and Helles Bock Lager. Clean medium bodied, with a higher alcohol content than most lagers. Tasting notes include: Caramel, Graham Cracker, toast, sweet herbs.', 
-	   	6.3, 
+	   	21, 6.3, 
 	   	'Hybrid Lager',
 	   	'true');
 
-INSERT INTO beers (beer_name, beer_description, abv, beer_type, is_active)
+INSERT INTO beers (beer_name, beer_description, image, abv, beer_type, is_active)
 VALUES (
 		'Ranchero', 
 		'Mexicali Lager. Traditional Amber Mexican Lager using California Common lager yeast, and Pacific Crest Noble Hops. Clean, dry, finish with light malty sweetness and toasted grain finish. Tasting notes include: wheat bread crust, and minty herbs.', 
-	   	5, 
+	   	22, 5, 
 	   	'Mexican Lager',
 	   	'true');
 
-INSERT INTO beers (beer_name, beer_description, abv, beer_type, is_active)
+INSERT INTO beers (beer_name, beer_description, image, abv, beer_type, is_active)
 VALUES (
 		'New Moon', 
 		'Wild Oat Stout, brewed with Local raw oat and wheat straw. Smooth medium bodied black Ale, with a medium dry finish and mild carbonation. Tasting notes include: Chocolate, Coffee, graham cracker, hay.', 
-	   	6, 
+	   	23, 6, 
 	   	'Stout',
 	   	'true');
 
-INSERT INTO beers (beer_name, beer_description, abv, beer_type, is_active)
+INSERT INTO beers (beer_name, beer_description, image, abv, beer_type, is_active)
 VALUES (
 		'Arbolada', 
 		'Black Lager or “schwarzbier” brewed for a very light body so that it can be drunk in hot weather, and infused with whole Mexican Vanilla beans for a slight creaminess. This beer is named after the shady oak stand in the northwest of the Ojai Valley. Mexican Vanilla is currently worth more than silver by the ounce. Tasting notes include: vanilla, chocolate, coffee, Cream Soda.', 
-	   	5.8, 
+	   	24, 5.8, 
 	   	'Black Lager',
 	   	'true');
 
-INSERT INTO beers (beer_name, beer_description, abv, beer_type, is_active)
+INSERT INTO beers (beer_name, beer_description, image, abv, beer_type, is_active)
 VALUES (
 		'Airhog Apricot Ale', 
 		'Straight up an experiment, Airhog Apricot Ale is hazy like crazy! With each sip of Airhog, you’ll pick up on the many aromas of sweet apricot blossoms and tart fruit as you draw the glass near. Deep, rich apricot flesh, then tart apricot notes dance on the palate and lead to a sweet apricot finish with a lingering fruit tartness.', 
-	   	7, 
+	   	25, 7, 
 	   	'Fruit IPA',
 	   	'true');
 
-INSERT INTO beers (beer_name, beer_description, abv, beer_type, is_active)
+INSERT INTO beers (beer_name, beer_description, image, abv, beer_type, is_active)
 VALUES (
 		'Amphibious Amber Ale', 
 		'Amphibious Amber Ale is an intensely malt centric beer accenting the aromatic and full-bodied flavors of English malts. Toasted caramel and mild chocolate aromatics are present with a hint of character from our house yeast. A great beer for the malt lover in all of us.', 
-	   	5, 
+	   	26, 5, 
 	   	'Amber Ale',
 	   	'true');
 
-INSERT INTO beers (beer_name, beer_description, abv, beer_type, is_active)
+INSERT INTO beers (beer_name, beer_description, image, abv, beer_type, is_active)
 VALUES (
 		'Battleship Blonde', 
 		'A great way to kick off your visit at Poseidon Brewing Co., our first-ever experimental blonde ale uses copious amounts of Caravienne malt with a dash of Columbus hops. We kept the hop addition to a minimum to help bring out the wonderful malt and fruit characteristics of this brew. Clean aromas of honey, nectarines, peaches and apricots are present. Smooth and refreshing!', 
-	   	6, 
+	   	27, 6, 
 	   	'Blonde Ale',
 	   	'true');
 
-INSERT INTO beers (beer_name, beer_description, abv, beer_type, is_active)
+INSERT INTO beers (beer_name, beer_description, image, abv, beer_type, is_active)
 VALUES (
 		'Blown Off Course IPA', 
 		'So we set out to brew an India Pale Ale, and it didn’t quite turn out like we’d planned, hence the name, Blown Off Course IPA. But being blown off course isn’t a bad thing when there is white grapefruit involved and the hops used include Cascade, Simcoe and Horizon.', 
-	   	7, 
+	   	28, 7, 
 	   	'Fruit IPA',
 	   	'true');
 
-INSERT INTO beers (beer_name, beer_description, abv, beer_type, is_active)
+INSERT INTO beers (beer_name, beer_description, image, abv, beer_type, is_active)
 VALUES (
 		'Borchard Beer Cali Common', 
 		'Borchard Beer is a California Common, also known as a Steam Beer, that is a 100% American-style lager brewed with a lager yeast strain that ferments at warmer ale-like temperatures. This method of fermenting dates back to the late 1800s in California when refrigeration was a great luxury.', 
-	   	5.8, 
+	   	29, 5.8, 
 	   	'California Common',
 	   	'true');
 

@@ -23,7 +23,6 @@ CREATE TABLE addresses (
 CREATE TABLE images (
 	image_id serial,
 	image_name varchar(100),
-	image_link varchar(100),
 	image_size bigint,
 	image_type varchar(100),
 	image_content bytea,

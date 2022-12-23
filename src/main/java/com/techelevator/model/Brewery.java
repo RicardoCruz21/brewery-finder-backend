@@ -14,11 +14,11 @@ public class Brewery {
     private List<Hours> hours = new ArrayList<>();
     private String phoneNumber;
     private String breweryHistory;
-    private String breweryLogo;
-    private String breweryImage;
+    private int breweryLogo;
+    private int breweryImage;
     private Boolean isActive;
 
-    public Brewery(int breweryId, String breweryName, int userId, String websiteUrl, String emailAddress, Address address, List<Hours> hours, String phoneNumber, String breweryHistory, String breweryLogo, String breweryImage, Boolean isActive) {
+    public Brewery(int breweryId, String breweryName, int userId, String websiteUrl, String emailAddress, Address address, List<Hours> hours, String phoneNumber, String breweryHistory, int breweryLogo, int breweryImage, Boolean isActive) {
         this.breweryId = breweryId;
         this.breweryName = breweryName;
         this.userId = userId;
@@ -91,11 +91,11 @@ public class Brewery {
         this.breweryHistory = breweryHistory;
     }
 
-    public String getBreweryLogo() {
+    public int getBreweryLogo() {
         return breweryLogo;
     }
 
-    public void setBreweryLogo(String breweryLogo) {
+    public void setBreweryLogo(int breweryLogo) {
         this.breweryLogo = breweryLogo;
     }
 
@@ -107,11 +107,11 @@ public class Brewery {
         isActive = active;
     }
 
-    public String getBreweryImage() {
+    public int getBreweryImage() {
         return breweryImage;
     }
 
-    public void setBreweryImage(String breweryImage) {
+    public void setBreweryImage(int breweryImage) {
         this.breweryImage = breweryImage;
     }
 
