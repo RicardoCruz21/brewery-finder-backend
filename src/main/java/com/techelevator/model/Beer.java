@@ -6,13 +6,13 @@ public class Beer {
     private int breweryId;
     private String beerName;
     private String beerDescription;
-    private String beerImage;
+    private int beerImage;
     private double beerAbv;
     private String beerType;
     private boolean isActive;
     private int averageRating;
 
-    public Beer(int beerId, int breweryId, String beerName, String beerDescription, String beerImage, double beerAbv, String beerType, boolean isActive, int averageRating) {
+    public Beer(int beerId, int breweryId, String beerName, String beerDescription, int beerImage, double beerAbv, String beerType, boolean isActive, int averageRating) {
         this.beerId = beerId;
         this.breweryId = breweryId;
         this.beerName = beerName;
@@ -51,11 +51,11 @@ public class Beer {
         this.beerDescription = beerDescription;
     }
 
-    public String getBeerImage() {
+    public int getBeerImage() {
         return beerImage;
     }
 
-    public void setBeerImage(String beerImage) {
+    public void setBeerImage(int beerImage) {
         this.beerImage = beerImage;
     }
 

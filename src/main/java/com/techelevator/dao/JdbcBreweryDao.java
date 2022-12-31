@@ -1,10 +1,7 @@
 package com.techelevator.dao;
 
 
-import com.techelevator.model.Address;
-import com.techelevator.model.Brewery;
-import com.techelevator.model.Hours;
-import com.techelevator.model.NewBreweryDto;
+import com.techelevator.model.*;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
 import org.springframework.stereotype.Component;
@@ -17,8 +14,10 @@ import java.util.List;
 public class JdbcBreweryDao implements BreweryDao {
 
     private JdbcTemplate jdbcTemplate;
-    public JdbcBreweryDao(JdbcTemplate jdbcTemplate) {
+    private ImageDao imageDao;
+    public JdbcBreweryDao(JdbcTemplate jdbcTemplate, ImageDao imageDao) {
         this.jdbcTemplate = jdbcTemplate;
+        this.imageDao = imageDao;
     }
 
     @Override
@@ -58,10 +57,13 @@ public class JdbcBreweryDao implements BreweryDao {
 
     @Override
     public void addBrewery(NewBreweryDto newBreweryDto) {
+        String sqlBreweryImage = "INSERT INTO images DEFAULT VALUES RETURNING image_id;";
+        int breweryLogoId = jdbcTemplate.queryForObject(sqlBreweryImage, int.class);
+        int breweryImageId = jdbcTemplate.queryForObject(sqlBreweryImage, int.class);
         String sqlAddresses = "INSERT INTO addresses (street_address, city, state, zipcode) VALUES (?, ?, ?, ?) RETURNING address_id;";
         int addressId = jdbcTemplate.queryForObject(sqlAddresses, int.class, newBreweryDto.getStreetAddress(), newBreweryDto.getCity(), newBreweryDto.getState(), newBreweryDto.getZipcode());
-        String sqlBrewery = "INSERT INTO breweries (brewery_name, user_id, address_id, is_active) VALUES (?, ?, ?, false) RETURNING brewery_id";
-        int breweryId = jdbcTemplate.queryForObject(sqlBrewery, int.class, newBreweryDto.getName(), newBreweryDto.getUserId(), addressId);
+        String sqlBrewery = "INSERT INTO breweries (brewery_name, user_id, address_id, brewery_logo, brewery_image, is_active) VALUES (?, ?, ?, false) RETURNING brewery_id";
+        int breweryId = jdbcTemplate.queryForObject(sqlBrewery, int.class, newBreweryDto.getName(), newBreweryDto.getUserId(), addressId, breweryLogoId, breweryImageId);
         for (int dayId = 1; dayId <= 7; dayId++) {
             String sqlHours = "INSERT INTO hours (day_id) VALUES (?) RETURNING hours_id;";
             int hoursId = jdbcTemplate.queryForObject(sqlHours, int.class, dayId);
@@ -115,8 +117,8 @@ public class JdbcBreweryDao implements BreweryDao {
         brewery.setEmailAddress(results.getString("email_address"));
         brewery.setPhoneNumber(results.getString("phone_number"));
         brewery.setBreweryHistory(results.getString("brewery_history"));
-        brewery.setBreweryLogo(results.getString("brewery_logo"));
-        brewery.setBreweryImage(results.getString("brewery_image"));
+        brewery.setBreweryLogo(results.getInt("brewery_logo"));
+        brewery.setBreweryImage(results.getInt("brewery_image"));
         brewery.setActive(results.getBoolean("is_active"));
 
         return brewery;
