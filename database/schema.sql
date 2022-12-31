@@ -1,6 +1,6 @@
 BEGIN TRANSACTION;
 
-DROP TABLE IF EXISTS users;
+--DROP TABLE IF EXISTS users, addresses, images, breweries, beers, reviews, hours, posts, events, breweries_beers, likes, beer_reviews, breweries_hours, breweries_posts, breweries_events;
 
 CREATE TABLE users (
 	user_id SERIAL,
